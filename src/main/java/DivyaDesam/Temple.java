@@ -1,4 +1,5 @@
 package DivyaDesam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -7,9 +8,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Temple {
+    @Autowired
+    private OtherTemples otherTemples;
 
     public  int iSum(int i,int j){
-        return (i+j);
+        int k= otherTemples.mySum(i,j);
+        return k;
     }
 
 }
