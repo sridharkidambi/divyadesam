@@ -34,6 +34,6 @@ public class HelloWorld {
     public  void  runMethod(ApplicationContext ctx){
        temple= (Temple)ctx.getBean("temple");
         otherTemples= (OtherTemples) ctx.getBean("otherTemples");
-        System.out.println(temple.iSum(1,4));
+        System.out.println(temple.iSum(1,4,otherTemples));
     }
 }
